@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMINA | Premium E-Commerce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-root">
+        <header class="navbar">
+            <div class="nav-inner">
+                <a href="#" class="logo" id="logo-btn">LUMINA</a>
+                <nav class="nav-links">
+                    <a class="nav-link active" id="home-link">Home</a>
+                    <a class="nav-link" id="shop-link">Shop</a>
+                    <div class="cart-btn" id="cart-open-btn">
+                        <span>Cart</span>
+                        <span class="cart-badge" id="cart-count">0</span>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <main id="main-content">
+            <!-- Home Section -->
+            <section id="home-section">
+                <div class="hero">
+                    <div class="left">
+                        <h1>Elegance in Every Detail</h1>
+                        <p style="color: var(--muted); font-size: 1.2rem; margin-bottom: 32px;">
+                            Elevate your lifestyle with our curated collection of premium essentials. 
+                            Designed for those who appreciate quality and minimalism.
+                        </p>
+                        <div style="display: flex; gap: 16px;">
+                            <button class="cta-btn" id="start-shopping-btn">Start Shopping</button>
+                            <button class="cta-btn secondary">View Lookbook</button>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800" alt="hero" style="border-radius: 24px; width: 100%; max-width: 450px; box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
+                    </div>
+                </div>
+
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px;">
+                    <h2 style="font-size: 2rem; margin: 0;">Featured Collections</h2>
+                    <a href="#" style="color: var(--accent); text-decoration: none; font-weight: 600;" id="browse-all-btn">Browse All Items →</a>
+                </div>
+                
+                <div class="products-grid" id="featured-grid">
+                    <!-- Featured products will be injected here -->
+                </div>
+            </section>
+
+            <!-- Shop Section (Hidden by default or shown via JS) -->
+            <section id="shop-section" style="display: none;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 40px;">Our Collection</h2>
+                <div class="products-grid" id="all-products-grid">
+                    <!-- All products will be injected here -->
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 LUMINA Essentials. All rights reserved.</p>
+            <p style="margin-top: 8px; font-size: 0.8rem; opacity: 0.5;">Premium Design & Quality</p>
+        </footer>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-cart" id="cart-close-btn">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items-container">
+            <!-- Cart items will be injected here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <span id="cart-total-price">$0.00</span>
+            </div>
+            <button class="checkout-btn" id="checkout-btn">Checkout Now</button>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-wrap" id="toast-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
